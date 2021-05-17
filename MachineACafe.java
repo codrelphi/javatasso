@@ -18,29 +18,31 @@ public class MachineACafe {
 		do {
 			System.out.println("Prix du café: 45 cents");
 			System.out.println("Pièces acceptées: 5, 10 et 20 cents");
+			System.out.println("Votre solde: " + totalPieces);
 			System.out.print("Entrez une pièce: ");
-			try {
-				piece = lectureClavier.nextByte();
-			} catch (InputMismatchException ime) {
-				System.out.println("\nErreur: la valeur entrée n'est pas juste !");
-				System.out.println("seules les pièces 5, 10 et 20 cents sont acceptées !");
-				System.out.println("Entrez une pièce: ");
-				piece = lectureClavier.nextByte();
+			piece = lectureClavier.nextByte();
+			switch (piece) {
+				case 5: 
+					pieceDe5 += 1;
+					break;
+				case 10:
+					pieceDe10 += 1;
+					break;
+				case 20:
+					pieceDe20 += 1;
+					break;
+				default:
+					System.out.println("Erreur: Je n'accepte que les pièces de 5, 10 et 20 cents.");
 			}
-			if (piece != 5 && piece != 10 && piece != 20) {
-				System.out.println("Je n'accepte que les pièces de 5, 10 et 20 cents.");
-			}
-			else {
-				totalPieces += piece;
-				if (piece == 5) pieceDe5 += 1;
-				if (piece == 10) pieceDe10 += 1;
-				if (piece == 20) pieceDe20 += 1;
-				System.out.println("Vous avez engagé " + totalPieces + " cents dont");
-				System.out.println("     " + pieceDe5 + " pièces de 5");
-				System.out.println("     " + pieceDe10 + " pièces de 10");
-				System.out.println("     " + pieceDe20 + " pièces de 20");
-			}
+
+			totalPieces += piece;
+
+			System.out.println("Vous avez engagé " + totalPieces + " cents dont");
+			System.out.println("     " + pieceDe5 + " pièces de 5");
+			System.out.println("     " + pieceDe10 + " pièces de 10");
+			System.out.println("     " + pieceDe20 + " pièces de 20");
 			System.out.println("---------------------------------------------");
+		
 		} while (totalPieces < 45);
 
 		if (totalPieces >= 45) {
