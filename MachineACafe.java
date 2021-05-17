@@ -46,8 +46,8 @@ public class MachineACafe {
 		
 		} while (totalPieces < 45);
 
-		if (totalPieces >= 45) {
-			System.out.println("Bien. Prenez votre café !");
+		System.out.println("Bien. Prenez votre café !");
+		if (totalPieces > 45) {
 			System.out.println("Monnaies rendues: " + (totalPieces - 45) + " cents !");
 		}
 
