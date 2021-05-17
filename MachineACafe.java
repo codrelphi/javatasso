@@ -32,6 +32,7 @@ public class MachineACafe {
 					pieceDe20 += 1;
 					break;
 				default:
+					piece = 0;
 					System.out.println("Erreur: Je n'accepte que les pièces de 5, 10 et 20 cents.");
 			}
 
