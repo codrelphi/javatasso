@@ -16,6 +16,8 @@ public class TestForParticularity {
 		System.out.print("Entrez une valeur: ");
 		byte valeur = lectureClavier.nextByte();
 
-		for (;;) System.out.println("Hello"); // ca compile
+		//for (;;) System.out.println("Hello"); // ca compile
+		
+		for (byte i=0; i<=valeur; i++); // ca compile
 	}
 }
