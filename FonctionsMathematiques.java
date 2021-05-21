@@ -43,5 +43,7 @@ public class FonctionsMathematiques {
 		System.out.println("max(" + a + "," + b + ") = " + resultat);
 		resultat = Math.min(a, b);
 		System.out.println("min(" + a + "," + b + ") = " + resultat);
+		resultat = Math.random();
+		System.out.println("random() = " + resultat);
 	}
 }
