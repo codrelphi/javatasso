@@ -9,17 +9,9 @@ public class ReturnComplexValues {
 
 	public static void main (String[] args) {
 	
-		String msg = ReturnComplexValues.jesuis("Chancerel", "Codjovi", "Bénin", 'M', (byte) 28);
-		System.out.println(msg);
+		Identification id = new Identification("Codjovi", "Chancerel", 'M', (byte) 28, "Bénin");
+		System.out.println(id.toString());
 	}
-
-
-	public static String jesuis(String prenom, String nom, String pays, char sexe, byte age) {
-		
-		Identification id = new Identification(nom, prenom, sexe, age, pays);
-		return id.leReturn();
-	}
-
 
 }
 
@@ -38,7 +30,7 @@ class Identification {
 		this.pays = pays;
 	}
 
-	public String leReturn() {
+	public String toString() {
 		return prenom + "," + nom + "," + sexe + "," + age + "," + pays;
 	}
 }
