@@ -15,6 +15,7 @@ public class VariableDeClasse {
 		System.out.println("valeur = " + valeur + " avant modifier()");
 		modifier();
 		System.out.println("valeur = " + valeur + " après modifier()");
+		System.out.println("Test de nom: " + VariableDeClasse.valeur);
 
 	}
 
