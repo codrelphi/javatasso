@@ -1,4 +1,4 @@
-/* objectif: lorsqu'on a plusieur résultats.
+/* objectif: lorsqu'on a plusieurs résultats.
  * Nb: un return ne peut retourner qu'un et un seul résultat (ex: return a;)
  * auteur: Chancerel Codjovi (aka codrelphi)
  * date: 31.05.2021
