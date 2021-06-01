@@ -36,7 +36,12 @@ public class Comparer {
 				System.out.print(prvb1 + " est après " + prvb2);
 			System.out.println(" dans le dictionnaire");
 		}
-
+		
+		System.out.print("Sans tenir compte des majuscules : ");
+		if (prvb1.equalsIgnoreCase(prvb2)) 
+			System.out.println("Les deux chaines sont identiques");
+		else
+			System.out.println("Les deux chaines sont différentes");
 
 	}
 }
