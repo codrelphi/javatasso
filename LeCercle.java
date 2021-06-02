@@ -1,5 +1,6 @@
 /* programme pour calculer la circonférence d'un cercle de rayon quelconque
  * date: 10.05.2021
+ * update: 02.06.2021
  * author: Chancerel Codjovi (aka codrelphi)
  */
 
