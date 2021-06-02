@@ -5,7 +5,7 @@
 
 import java.util.Scanner;
 
-class Cercle {
+class LeCercle {
 
 	public static void main(String[] args) {
 		double unRayon, lePerimetre, laSurface;
