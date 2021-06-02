@@ -23,7 +23,7 @@ public class FaireDesCercles {
 
 		double p = A.perimetre();
 		System.out.println(" Votre cercle a pour périmètre : " + p);
-		A.deplacer(2, 5);
+		A.deplacer(5, 2);
 		System.out.println(" Après déplacement : ");
 		A.afficher();
 		A.agrandir(10);
