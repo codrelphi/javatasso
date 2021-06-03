@@ -13,7 +13,7 @@ public class Cercle {
 	public int r; // rayon du cercle
 	public static int nombre; // nombre de cercle 
 
-	public void créer() {
+	public void creer() {
 		Scanner lectureClavier = new Scanner(System.in);
 		System.out.print(" Position en x : ");
 		x = lectureClavier.nextInt();
