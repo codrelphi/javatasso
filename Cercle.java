@@ -41,5 +41,16 @@ public class Cercle {
 	public void agrandir(int nr) {
 		r += nr;
 	}
+	
+	public void echanger(Cercle autre) {
+		int tmp;
 
+		tmp = x;
+		x = autre.x;
+		autre.x = tmp;
+
+		tmp = y;
+		y = autre.y;
+		autre.y = tmp;
+	}
 }
