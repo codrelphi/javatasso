@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class FaireDesCerclesControles {
 
 	public static void main (String[] args) {
-
+		
 		Scanner lectureClavier = new Scanner(System.in);
 		CercleControle A = new CercleControle();
 		A.creer();

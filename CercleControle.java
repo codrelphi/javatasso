@@ -17,7 +17,7 @@ public class CercleControle {
 		System.out.print(" Position en y : ");
 		y = lectureClavier.nextInt();
 		do {
-			System.out.print(" Rayon              :");
+			System.out.print(" Rayon         : ");
 			r = lectureClavier.nextInt();
 		} while (r<0 || r>600);
 	}
