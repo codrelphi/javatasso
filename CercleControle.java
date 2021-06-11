@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class CercleControle {
 
 	private int x, y, r; // position du centre et rayon
+	public final static int TailleEcran = 600; 
 
 	public void creer() {
 		Scanner lectureClavier = new Scanner(System.in);
@@ -19,7 +20,7 @@ public class CercleControle {
 		do {
 			System.out.print(" Rayon         : ");
 			r = lectureClavier.nextInt();
-		} while (r<0 || r>600);
+		} while (r<0 || r>TailleEcran);
 	}
 
 	public void afficher() { //Affichage des données de la classe
@@ -29,7 +30,7 @@ public class CercleControle {
 
 	public void agrandir(int nr) {
 		if (r + nr < 0) r = 0;
-		else if (r + nr > 600) r = 600;
+		else if (r + nr > TailleEcran) r = TailleEcran;
 		else r += nr;
 	}
 

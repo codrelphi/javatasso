@@ -2,6 +2,7 @@
  * auteur: Chancerel Codjovi (aka codrelphi)
  * date: 02.06.2021
  * update: 03.06.2021
+ * update: 11.06.2021
  *
  */
 
@@ -9,18 +10,29 @@ import java.util.Scanner;
 
 public class Cercle {
 
-	public int x, y; // position au centre du cercle
-	public int r; // rayon du cercle
+	private int x, y; // position au centre du cercle
+	private int r; // rayon du cercle
 	public static int nombre; // nombre de cercle 
+	public static final short TailleEcran = 600;
 
-	public void creer() {
-		Scanner lectureClavier = new Scanner(System.in);
+	private Scanner lectureClavier = new Scanner(System.in);
+	
+	// ce code n'est pas un contructeur mais une méthode
+	// elle n'est pas appelée par l'opérateur new
+	public void Cercle() {
+		x = 1;
+		y = 1;
+		r = 1;
+	}
+	
+	// public void creer() est transformé en constructeur
+	// public Cercle()
+	public Cercle() {
 		System.out.print(" Position en x : ");
 		x = lectureClavier.nextInt();
 		System.out.print(" Position en y : ");
 		y = lectureClavier.nextInt();
-		System.out.print(" Rayon : ");
-		r = lectureClavier.nextInt();
+		r = rayonVerifier();
 		nombre++;
 	}
 
@@ -52,5 +64,20 @@ public class Cercle {
 		tmp = y;
 		y = autre.y;
 		autre.y = tmp;
+	}
+
+	private int rayonVerifier() {
+		int tmp;
+		do {
+			System.out.print(" Rayon : ");
+			tmp = lectureClavier.nextInt();
+		} while (tmp < 0 || tmp > TailleEcran);
+		return tmp;
+	}
+
+	private int rayonVerifier(int tmp) {
+		if (tmp < 0) return 0;
+		else if (tmp > TailleEcran) return TailleEcran;
+		else return tmp;
 	}
 }
