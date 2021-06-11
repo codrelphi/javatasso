@@ -36,6 +36,16 @@ public class Cercle {
 		nombre++;
 	}
 
+	public Cercle(int centreX, int centreY) {
+		x = centreX;
+		y = centreY;
+	}
+
+	public Cercle(int centreX, int centreY, int rayon) {
+		this(centreX, centreY);
+		r = rayon;
+	}
+
 	public void afficher() {
 		System.out.println("Cercle centré en " + x + ", " + y);
 		System.out.println(" de rayon : " + r);

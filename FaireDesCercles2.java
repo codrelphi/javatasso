@@ -10,5 +10,9 @@ public class FaireDesCercles2 {
 
 		Cercle A = new Cercle();
 		A.afficher();
+		Cercle B = new Cercle(10, 10);
+		B.afficher();
+		Cercle C = new Cercle(10, 10, 30);
+		C.afficher();
 	}
 }
