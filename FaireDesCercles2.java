@@ -12,7 +12,7 @@ public class FaireDesCercles2 {
 		A.afficher();
 		Cercle B = new Cercle(10, 10);
 		B.afficher();
-		Cercle C = new Cercle(10, 10, 30);
+		Cercle C = new Cercle(10, 10, -30);
 		C.afficher();
 	}
 }

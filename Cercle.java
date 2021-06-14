@@ -43,7 +43,7 @@ public class Cercle {
 
 	public Cercle(int centreX, int centreY, int rayon) {
 		this(centreX, centreY);
-		r = rayon;
+		r = rayonVerifier(rayon);
 	}
 
 	public void afficher() {
