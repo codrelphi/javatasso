@@ -22,10 +22,11 @@ public class TVSamsung implements InterfaceAppareil {
 
 		do {
 			System.out.print("Voulez-vous éteindre la TV Samsung ? (O/N) : ");
-			reponse = lectureClavier.next();
-			reponse = reponse.toUpperCase();
+			reponse = lectureClavier.next().charAt(0);
+			reponse = Character.toUpperCase(reponse);
+			System.out.println("Réponse: " + reponse);
 
-		} while (reponse != 'O' || reponse != 'N');
+		} while (reponse != 'O' && reponse != 'N');
 
 		if (reponse == 'O') System.out.println(".... TV Samsung bien éteint !");
 		else System.out.println("TV Samsung toujours allumée !");
