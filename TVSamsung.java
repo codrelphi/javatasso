@@ -32,4 +32,13 @@ public class TVSamsung implements InterfaceAppareil {
 		else System.out.println("TV Samsung toujours allumée !");
 
 	}
+
+	public void hello(String word) {
+		System.out.println("***************************");
+		System.out.println("Hello world  <" + word + ">");
+		System.out.println("Je suis la méthode <hello> redéfinie.");
+		System.out.println("***************************");
+	}
+
+
 }
