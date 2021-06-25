@@ -1,4 +1,4 @@
-/* objectif: réaliser le classement par moyenne d'une classe d'étudiants
+/* objectif: représenter un objet Etudiant
  * auteur: Chancerel Codjovi (aka codrelphi)
  * date: 25.06.2021
  *
