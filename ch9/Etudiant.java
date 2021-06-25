@@ -19,12 +19,12 @@ public class Etudiant {
 		nom = lectureClavier.next();
 		System.out.print("Entrez le prénom : ");
 		prenom = lectureClavier.next();
-		System.out.print("Combien de notes pour l'étudiant ");
+		System.out.print(" Combien de notes pour l'étudiant ");
 		System.out.print(prenom + " " + nom + " : ");
 		var nombre = lectureClavier.nextByte();
 		notes = new double[nombre];
 		for (var i = 0; i < notes.length; i++) {
-			System.out.print("Entrez la note n°" + (i+1) + " : ");
+			System.out.print(" Entrez la note n°" + (i+1) + " : ");
 			notes[i] = lectureClavier.nextInt();
 		}
 		moyenne = calculMoyenne();
@@ -43,11 +43,11 @@ public class Etudiant {
 
 	public void afficherUnEtudiant() {
 
-		System.out.print("Les notes de " + prenom + " " + nom + " sont : ");
+		System.out.print(" Les notes de " + prenom + " " + nom + " sont : ");
 		for (var note : notes) 
 			System.out.print(" " + note);
 		System.out.println();
-		System.out.println("sa moyenne vaut : " + this.moyenne);
+		System.out.println(" sa moyenne vaut : " + this.moyenne);
 
 	}
 
