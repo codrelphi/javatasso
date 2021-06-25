@@ -36,7 +36,8 @@ public class Etudiant {
 		return somme / notes.length;
 	}
 
-	public double quelleMoyenne() {
+	// équivalent de quelleMoyenne() {...}
+	public double getMoyenne() {
 		return moyenne;
 	}
 
