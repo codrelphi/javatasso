@@ -1,6 +1,7 @@
-/* objectif: représenter un cursus
+/* objectif: représenter un cursus (solution initiale)
  * auteur: Chancerel Codjovi (aka codrelphi)
  * date: 25.06.2021
+ * update: 26.06.2021
  *
  */
 
@@ -37,10 +38,14 @@ public class Cursus {
 			}
 		}
 
+		Cursus.afficherLesEtudiants(liste);
+
+	}
+
+	public static void afficherLesEtudiants(Etudiant [] liste) {
 		for (var e : liste) {
 			e.afficherUnEtudiant();
 		}
-
 	}
 
 }
