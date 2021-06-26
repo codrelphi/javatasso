@@ -8,7 +8,7 @@
 import java.util.Scanner;
 
 
-public class Cursus {
+public class Cursus2 {
 
 	public static void main(String [] args) {
 
