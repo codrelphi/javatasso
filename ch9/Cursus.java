@@ -22,9 +22,29 @@ public class Cursus {
 	public void afficherLesEtudiants() {
 		for (var e : liste) e.afficherUnEtudiant();
 	}
+	
+	private int ouEstLePlusPetit(int debut) {
+
+		int indiceDuMin = debut;
+		for (var j = debut+1; j < liste.length; j++) {
+			if (liste[j].getMoyenne() < liste[indiceDuMin].getMoyenne()){
+				indiceDuMin = j;
+			}
+		}
+
+		return indiceDuMin;
+	}
 
 	public void classerParMoyenne() {
 		// classer les étudiants en fonction de leur moyenne, ordre: ASC
+		int indiceDuPlusPetit;
+		Etudiant tmp;
+		for (var i = 0; i < liste.length; i++) {
+			indiceDuPlusPetit = ouEstLePlusPetit(i);
+			tmp = liste[i];
+			liste[i] = liste[indiceDuPlusPetit];
+			liste[indiceDuPlusPetit] = tmp;
+		}
 	}
 
 
