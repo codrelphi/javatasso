@@ -31,14 +31,22 @@ public class Sapin {
 		// initialisation du tableau
 		for (var i = 0; i < sapin.length; i++) {
 			for (var j = -i; j <= i; j++) {
-				sapin[i][milieu + j] = 1;
+				sapin[i][milieu + j] = (int) (5 * Math.random() + 1);
 			}
 		}
 
 		// affichage
 		for (var i = 0; i < sapin.length; i++) {
 			for (var j = 0; j < sapin[0].length; j++) {
-				System.out.print(sapin[i][j]);
+				switch(sapin[i][j]) {
+					case 0:
+						System.out.print(" ");
+						break;
+					case 2: System.out.print("%");
+						break;
+					default:
+						System.out.print(".");
+				}
 			}
 			System.out.println();
 		}
