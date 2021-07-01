@@ -6,6 +6,8 @@
 
 
 import java.util.HashMap;
+import java.util.Collection;
+import java.util.Iterator;
 
 
 public class CursusHM {
