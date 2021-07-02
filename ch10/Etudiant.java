@@ -1,6 +1,7 @@
 /* objectif: représenter un objet Etudiant
  * auteur: Chancerel Codjovi (aka codrelphi)
  * date: 25.06.2021
+ * update: 02.07.2021
  *
  */
 
@@ -50,6 +51,12 @@ public class Etudiant {
 		System.out.println(" sa moyenne vaut : " + this.moyenne);
 
 	}
+
+	public String getPrenom() 
+		return prenom;
+
+	public String getNom() 
+		return nom;
 
 
 }
