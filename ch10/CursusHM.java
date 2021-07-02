@@ -7,15 +7,15 @@
 
 import java.util.HashMap;
 import java.util.Collection;
-import java.util.Iterator;
+//import java.util.Iterator;
 
 
 public class CursusHM {
 
-	private HashMap listeClassee;
+	private HashMap<String, Etudiant> listeClassee;
 
 	public CursusHM() {
-		listeClassee = new HashMap();
+		listeClassee = new HashMap<String, Etudiant>();
 	}
 
 	private String creerUneClee(Etudiant e) {
@@ -41,7 +41,7 @@ public class CursusHM {
 	public void rechercherUnEtudiant(String p, String n) {
 
 		var clee = creerUneClee(p, n);
-		var tmpEtudiant = (Etudiant) listeClassee.get(clee);
+		var tmpEtudiant = listeClassee.get(clee);
 
 		if (tmpEtudiant != null) 
 			tmpEtudiant.afficherUnEtudiant();
@@ -53,7 +53,7 @@ public class CursusHM {
 	public void supprimerUnEtudiant(String p, String n) {
 
 		var clee = creerUneClee(p, n);
-		var tmpEtudiant = (Etudiant) listeClassee.get(clee);
+		var tmpEtudiant = listeClassee.get(clee);
 		if (tmpEtudiant != null) {
 			listeClassee.remove(clee);
 			System.out.println(p + " " + n + " a été bien supprimé !");
@@ -66,11 +66,16 @@ public class CursusHM {
 
 		if (listeClassee.size() != 0) {
 
-			Collection c = listeClassee.values();
-			for (Iterator i = c.iterator(); i.hasNext();) {
+			Collection<Etudiant> c = listeClassee.values();
+			/* Parcours en utilisant un Iterator
+			 * for (Iterator i = c.iterator(); i.hasNext();) {
 				Etudiant e = i.next();
 				e.afficherUnEtudiant();
 			}
+			*/
+
+			for (var i : c) 
+				i.afficherUnEtudiant();
 		}
 		else 
 			System.out.println("Il n'y a pas d'étudiants dans cette liste !");

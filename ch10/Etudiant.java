@@ -52,11 +52,13 @@ public class Etudiant {
 
 	}
 
-	public String getPrenom() 
+	public String getPrenom() {
 		return prenom;
+	}
 
-	public String getNom() 
+	public String getNom() {
 		return nom;
+	}
 
 
 }
