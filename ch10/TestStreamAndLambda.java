@@ -50,11 +50,33 @@ public class TestStreamAndLambda {
 		auteurs.add("Jean Pliya");
 		auteurs.add("Robert Greene");
 
+		System.out.println("Liste des auteurs commençant par H: ");
 		auteurs.stream()
 			.map(auteur -> auteur.split(" ")[1])
 			.filter(nom -> nom.startsWith("H"))
 			.sorted()
 			.forEach(auteur -> System.out.println(auteur));
+
+		System.out.print("Recherche le 1er auteur débutant par 'J' : ");
+		var element = auteurs.stream()
+			.filter(auteur -> auteur.startsWith("J"))
+			.findFirst()
+			.get();
+		System.out.print(element);
+		System.out.println();
+
+		System.out.println("Tous les auteurs débutant par 'J' : ");
+		auteurs.stream()
+			.filter(auteur -> auteur.startsWith("J"))
+			.forEach(x -> System.out.println(x));
+		
+		System.out.println("Tous les auteurs débuant par <J> : ");
+		var elements = new ArrayList<String>();
+		auteurs.stream()
+			.filter(auteur -> auteur.startsWith("J"))
+			.forEach(x -> elements.add(x));
+		System.out.println(elements);
+
 
 	}
 
