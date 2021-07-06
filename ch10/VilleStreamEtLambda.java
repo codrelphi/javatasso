@@ -1,6 +1,7 @@
 /* objectif: essayer Stream et lambda expression
  * auteur: Chancerel Codjovi
  * date: 05.07.2021
+ * update: 06.07.2021
  *
  */
 
@@ -66,7 +67,16 @@ public class VilleStreamEtLambda {
 			});
 		System.out.println("\n Le nombre de villes débutant par " + 
 				caractere + " est : " + nbVillesDebutantParCaractere);
-
+		/*
+		 * Améliorations:
+		 * - Faire un Menu (pour sélectionner l'action à réaliser
+		 * - Faire les opérations basique du CRUD pour une ville
+		 * - Afficher la liste de toutes les villes
+		 * - Afficher les villes en fonction de la taille (ex: ville 
+		 *   	de plus de 7 lettresdonnée par l'user
+		 * - Rechercher les villes débutant par un caractère entré par l'user
+		 *
+		 */
 
 	}
 
